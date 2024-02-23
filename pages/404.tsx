@@ -57,7 +57,7 @@ const Custom404: NextPageWithLayout = () => {
             <List sx={{ listStyle: "square", listStylePosition: "outside" }}>
               <ListItem sx={{ display: "list-item" }}>
                 <ListItemText>
-                  <Link href="/">Text To Image Converter</Link>
+                  <Link href="/">Youtube to MP3 Converter</Link>
                 </ListItemText>
               </ListItem>
               {/* <ListItem sx={{ display: "list-item" }}>

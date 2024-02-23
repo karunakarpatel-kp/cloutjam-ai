@@ -1,54 +1,39 @@
+import { Paragraph } from "@Components/Elements/Paragraph/Paragraph";
 import { AddLink, Backspace } from "@mui/icons-material";
-import { Box, Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, Stack } from "@mui/material";
-import React, { useRef, useState } from "react";
+import {
+  Alert,
+  Box,
+  Button,
+  FormControl,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  OutlinedInput,
+  Snackbar,
+  Stack,
+  TextField,
+} from "@mui/material";
+import axios from "axios";
+import React, { useEffect, useRef, useState } from "react";
+import SingleVideoCard from "./SingleVideoCard";
+import { LoadingButton } from "@mui/lab";
+import { useDispatch, useSelector } from "react-redux";
+import { sendDataFromYT, sendInputURL, sendLoadingStatus, sendServiceError } from "store/utilitySlice";
+import { AppDispatch, RootState } from "store/centralStore";
+import { callYTAPIService } from "store/YTAPISlice";
 
-const URL = "https://youtu.be/tPEE9ZwTmy0?si=sUoY0k8I47petUoB";
-
-// export const handleDownload = async () => {
-//   try {
-//     const options: any = {
-//       url: "https://youtu.be/tPEE9ZwTmy0?si=sUoY0k8I47petUoB",
-//       folder: "downloads", // optional, default: "youtube-exec"
-//       filename: "filename", // optional, default: video title
-//       resolution: 720, // 144, 240, 360, 480, 720, 1080, 1440, 2160, or 4320; default: 480
-//     };
-//     const data = await youtubeDl(options);
-//     console.log("Video downloaded successfully! 🎥🎉", data);
-//   } catch (err) {
-//     console.error("An error occurred:", err);
-//   }
-// };
-
-const handleDownload = async () => {
-  const downloadData = {
-    url: "https://youtu.be/QntqP3PrW3c?si=5-nv8itZGbMq3R0T",
-    folder: "downloads",
-    filename: "filename",
-    resolution: 720,
-  };
-
-  try {
-    const response = await fetch("/api/download", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(downloadData),
-    });
-
-    const data = await response.json();
-    // setDownloadStatus(data.message || data.error);
-    console.log("IncomingDataRes@Client", data);
-  } catch (error) {
-    console.error("An error occurred From Client:", error);
-    // setDownloadStatus("Error downloading video");
-  }
-};
-
-const DownloadPlugin = () => {
+const DownloadPlugin: any = () => {
+  const dispatch = useDispatch<AppDispatch>();
   const userInputRef = useRef<HTMLInputElement>();
+
+  const getLoadingStatus = useSelector((state: RootState) => state.YTAPISlice.status);
+
   const [userInputLink, setUserInputLink] = useState<string>("");
   const [inputError, setInputError] = useState<boolean>(false);
+
+  const handleDownload = async (incomingURL: string) => {
+    dispatch(callYTAPIService(incomingURL));
+  };
 
   const onStartClickHandler = () => {
     const captureUserInput = userInputRef.current!.value;
@@ -57,7 +42,8 @@ const DownloadPlugin = () => {
     } else {
       setInputError(false);
       setUserInputLink(captureUserInput);
-      // handleDownload();
+      dispatch(sendInputURL(captureUserInput));
+      handleDownload(captureUserInput);
     }
   };
 
@@ -77,37 +63,64 @@ const DownloadPlugin = () => {
     }
   };
 
-  console.log(userInputLink, "INPUT_LINK");
-
   return (
     <>
-      <Box border={0}>
-        <FormControl fullWidth sx={{ m: 1 }} error={inputError}>
-          <Stack direction="row" spacing={1}>
-            <InputLabel htmlFor="outlined-adornment-amount">Link</InputLabel>
+      <Box mt={8} mb={1} border={0} borderColor="white">
+        <FormControl fullWidth sx={{ m: 1, color: "white" }} error={inputError}>
+          <Stack direction={{ xs: "column", sm: "column", md: "row", lg: "row" }} spacing={2} width="100%">
+            {/* <InputLabel htmlFor="outlined-adornment-amount">Link</InputLabel> */}
             <OutlinedInput
+              inputProps={{
+                style: {
+                  color: "white !important",
+                  outlineColor: "white",
+                  borderColor: "white",
+                  WebkitBoxShadow: "0 0 0 1000px #284A98 inset",
+                },
+              }}
               placeholder="Please paste the url to download"
               inputRef={userInputRef}
               onBlur={onBlurHandler}
-              sx={{ width: 4 / 5 }}
+              autoComplete="false"
+              sx={{
+                width: { xs: 5 / 5, sm: 5 / 5, md: 5 / 5, lg: 5 / 5 },
+                color: "white",
+                "&.MuiInputBase-root.MuiOutlinedInput-root": {
+                  borderTop: "1px solid white",
+                  outline: "1px solid white",
+                },
+              }}
               id="outlined-adornment-amount"
               startAdornment={
                 <InputAdornment position="start">
-                  <AddLink />
+                  <AddLink sx={{ color: "white" }} />
                 </InputAdornment>
               }
               endAdornment={
                 <InputAdornment position="end">
                   <IconButton onClick={onBackSpaceClickHandler}>
-                    <Backspace />
+                    <Backspace sx={{ color: "white" }} />
                   </IconButton>
                 </InputAdornment>
               }
               label="Amount"
             />
-            <Button variant="contained" onClick={onStartClickHandler}>
-              Start Download
-            </Button>
+            <LoadingButton
+              onClick={onStartClickHandler}
+              loading={getLoadingStatus === "PENDING" && true}
+              disableRipple
+              disableElevation
+              disableFocusRipple
+              sx={{
+                bgcolor: "white",
+                color: "black",
+                width: 2 / 5,
+                "&.MuiButton-root.MuiLoadingButton-root:hover": { backgroundColor: "white" },
+              }}
+              variant="outlined"
+            >
+              <span>Start Download</span>
+            </LoadingButton>
           </Stack>
         </FormControl>
       </Box>

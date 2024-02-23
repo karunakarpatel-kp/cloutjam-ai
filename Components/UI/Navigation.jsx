@@ -11,6 +11,7 @@ import Stack from "@mui/material/Stack";
 import Logo from ".././../public/Logo.svg";
 import ReadingProgressBar from "./ReadingProgressBar";
 import { useDispatch } from "react-redux";
+import { resetYTSlice } from "store/YTAPISlice";
 
 const Navigation = () => {
   const [homePageActive, setHomePageActive] = useState(false);
@@ -19,7 +20,7 @@ const Navigation = () => {
   const dispatch = useDispatch();
 
   const onLogoClickHandler = () => {
-    // dispatch(resetTextToImageSlice(null));
+    dispatch(resetYTSlice(null));
   };
 
   useEffect(() => {

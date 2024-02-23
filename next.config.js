@@ -20,7 +20,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cars.tatamotors.com",
+        hostname: "i.ytimg.com",
       },
     ],
   },

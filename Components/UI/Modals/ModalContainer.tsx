@@ -30,6 +30,7 @@ const ModalContainer = () => {
   const iframeRef = React.useRef<any>();
   const mobileLoadingRef = React.useRef<any>();
   const desktopLoadingRef = React.useRef<any>();
+  // const downloadBtnDisabledStatus = React.useRef<any>();
   const dispatch = useDispatch<AppDispatch>();
   const openModalStatus = useSelector((state: RootState) => state.utilitySlice.openModal);
   const getVideoURL = useSelector((state: RootState) => state.utilitySlice.videoURL);
@@ -69,6 +70,7 @@ const ModalContainer = () => {
       desktopLoadingEle.style.display = "none";
       mobileLoadingEle.style.display = "none";
       iframeEle.current.style.opacity = "1";
+      // loadingBtnDisabledStatus.current.style.disabled = "false";
     };
 
     if (iframeEle.current) {
@@ -79,7 +81,7 @@ const ModalContainer = () => {
   // Setting Modal Name Below
   useEffect(() => {
     if (router.pathname === "/youtube-to-mp3") {
-      setModalName(" MP3");
+      setModalName("MP3");
     } else if (router.pathname === "/youtube-to-mp4") {
       setModalName("MP4");
     } else if (router.pathname === "/youtube-video-downloader") {
@@ -172,6 +174,8 @@ const ModalContainer = () => {
               onClick={onDownloadClickHandler}
               sx={{ mt: 2, mb: 2, width: "70%" }}
               disableElevation
+              // ref={downloadBtnDisabledStatus}
+              // disabled={true}
             >
               {/* {`Download ${router.pathname === "/youtube-to-mp3" ? "Audio" : "Video"}`} */}
               Download{`${modalName}`}
