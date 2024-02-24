@@ -53,15 +53,15 @@ const PrivacyPage: NextPageWithLayout = () => {
       >
         <Grid item md={8} lg={8}>
           <P>
-            This Privacy Policy outlines how <B>Blogginglover.in</B> collects, uses, and protects the personal
-            information you provide while using our website. We are committed to ensuring the privacy and security of
-            your personal information. By using Blogginglover.in, you agree to the terms and practices described in this
-            policy.
+            This Privacy Policy outlines how <B>CloutjamAI.com</B> collects, uses, and protects the personal information
+            you provide while using our website. We are committed to ensuring the privacy and security of your personal
+            information. By using youtube to mp3 tool at https://cloutjamai.com/, you agree to the terms and practices
+            described in this policy.
           </P>
           <HeadingTwo id="heading" title="Information We Collect" />
           <P>
-            When you visit Blogginglover.in, we may collect certain personally identifiable information, including but
-            not limited to:
+            When you visit https://cloutjamai.com/, we may collect certain personally identifiable information,
+            including but not limited to:
           </P>
           <List sx={{ listStyle: "square", listStylePosition: "outside" }}>
             <ListItem sx={{ display: "list-item" }}>

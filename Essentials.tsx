@@ -1,5 +1,5 @@
-import welcomePatelsImage from "@Public/welcome-page.png";
 import youtubevideotomp3 from "@Public/youtube-to-mp3.png";
+
 interface blogPostURLSProps {
   // YOUTUBE_VIDEO_TO_MP3_PAGE_ABSOLUTE: string;
   // YOUTUBE_VIDEO_TO_MP3_PAGE_RELATIVE: string;
@@ -7,8 +7,8 @@ interface blogPostURLSProps {
   HOME_PAGE_ABSOLUTE: string;
   HOME_PAGE_RELATIVE: string;
 
-  BLOG_PAGE_RELATIVE: string;
-  BLOG_PAGE_ABSOLUTE: string;
+  // BLOG_PAGE_RELATIVE: string;
+  // BLOG_PAGE_ABSOLUTE: string;
 
   PRIVACY_PAGE_ABSOLUTE: string;
   PRIVACY_PAGE_RELATIVE: string;
@@ -94,9 +94,6 @@ export const blogPostURLS: blogPostURLSProps = {
   HOME_PAGE_ABSOLUTE: BASE_URL.HOME_PAGE_BASE_URL,
   HOME_PAGE_RELATIVE: "/",
 
-  BLOG_PAGE_ABSOLUTE: BASE_URL.BLOG_PAGE_BASE_URL,
-  BLOG_PAGE_RELATIVE: "/Blog",
-
   PRIVACY_PAGE_ABSOLUTE: `${BASE_URL.HOME_PAGE_BASE_URL}/privacy`,
   PRIVACY_PAGE_RELATIVE: "/privacy",
 
@@ -105,9 +102,6 @@ export const blogPostURLS: blogPostURLSProps = {
 
   DISCLAIMER_PAGE_ABSOLUTE: `${BASE_URL.HOME_PAGE_BASE_URL}/disclaimer`,
   DISCLAIMER_PAGE_RELATIVE: "/disclaimer",
-
-  // YOUTUBE_VIDEO_TO_MP3_PAGE_ABSOLUTE: `${BASE_URL.HOME_PAGE_BASE_URL}/youtube-to-mp3`,
-  // YOUTUBE_VIDEO_TO_MP3_PAGE_RELATIVE: "/youtube-to-mp3",
 };
 
 export const SEO_OBJ: SEO_OBJ_Props = {
@@ -115,44 +109,31 @@ export const SEO_OBJ: SEO_OBJ_Props = {
   HOME_PAGE: {
     absoluteURL: blogPostURLS.HOME_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.HOME_PAGE_RELATIVE,
-    title: "Karunakar Patel: Navigating the landscape of programming knowledge",
+    title: "Youtube to MP3 Converter",
     description:
-      "Explore programming with Karunakar Patel. Find simplified explanations, hands-on tutorials, practical tips, and personal experiences about programming",
+      "Download your YouTube videos as MP3 (audio) files for free with the fastest and most powerful YouTube Converter. No app or software needed to use this youtube to mp3 converter.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2023-10-20T19:07:55+00:00",
-    featuredImage: welcomePatelsImage,
+    publishedTime: "2024-02-24T06:23:14+05:30",
+    featuredImage: youtubevideotomp3,
     featuredImageAltText: "a-person-with-computer",
     ogImageURL: `${BASE_URL.HOME_PAGE_BASE_URL}/welcome-page.png`,
     tags: [
       { tag: "youtube-mp3", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
-      { tag: "video-to-mp3", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
-      { tag: "Blog", href: `${blogPostURLS.BLOG_PAGE_RELATIVE}` },
+      { tag: "video-to-mp3-converter", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
+      { tag: "Home", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
       { tag: "Karunakar Patel", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
     ],
-  },
-  // BlogPage  /Blog/
-  BLOG_PAGE: {
-    absoluteURL: blogPostURLS.BLOG_PAGE_ABSOLUTE,
-    relativeURL: blogPostURLS.BLOG_PAGE_RELATIVE,
-    title: "Karunakar Patel Blog: A hub for programming enthusiasts.",
-    description:
-      "Welcome to Karunakar Patels Blog! This is the perfect place for people who love programming. You'll find easy-to-understand articles and tutorials for beginners and experienced coders alike. Join our community and let's learn and grow together in the world of coding!",
-    lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2023-10-20T19:19:55+00:00",
-    featuredImage: welcomePatelsImage,
-    featuredImageAltText: "a-person-with-computer",
-    ogImageURL: `${BASE_URL.HOME_PAGE_BASE_URL}/welcome-page.png`,
   },
 
   POLICY_PAGE: {
     absoluteURL: blogPostURLS.PRIVACY_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.PRIVACY_PAGE_RELATIVE,
-    title: "Privacy Policy | KarunakarPatel Blog",
+    title: "Privacy Policy | Youtube to MP3 | CloutjamAI ",
     description:
-      "Welcome to KarunakarPatel privacy policy. In here you can find all the details about privacy policy of Karunakar Patel",
+      "Welcome to youtube to mp3 privacy policy. In here you can find all the details about privacy policy of Karunakar Patel",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2023-12-09T19:07:55+00:00",
-    featuredImage: welcomePatelsImage,
+    publishedTime: "2024-02-24T06:23:14+05:30",
+    featuredImage: youtubevideotomp3,
     featuredImageAltText: "a-person-with-computer",
     ogImageURL: `${BASE_URL.HOME_PAGE_BASE_URL}/welcome-page.png`,
   },
@@ -160,12 +141,12 @@ export const SEO_OBJ: SEO_OBJ_Props = {
   CONTACT_PAGE: {
     absoluteURL: blogPostURLS.CONTACT_PAGE_ABSOLUTE,
     relativeURL: blogPostURLS.CONTACT_PAGE_RELATIVE,
-    title: "Contact Us | KarunakarPatel",
+    title: "Contact Us | Youtube To MP3 | CloutjamAI",
     description:
-      "Welcome to KarunakarPatel contact page. In here you can find all the details of about KarunakarPatel contact information and a way to contact administrator of the KarunakarPatel site.",
+      "Welcome to youtube to mp3 converter contact page. In here you can find all the details of about  who built youtube to mp3 converter contact information and a way to contact administrator of the CloutjamAI site.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2023-12-09T19:07:55+00:00",
-    featuredImage: welcomePatelsImage,
+    publishedTime: "2024-02-24T06:23:14+05:30",
+    featuredImage: youtubevideotomp3,
     featuredImageAltText: "a-person-with-computer",
     ogImageURL: `${BASE_URL.HOME_PAGE_BASE_URL}/welcome-page.png`,
   },
@@ -177,31 +158,11 @@ export const SEO_OBJ: SEO_OBJ_Props = {
     description:
       "Welcome to KarunakarPatel disclaimer page. In here you can find all the details of about KarunakarPatel's Disclaimer and its policies.",
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-    publishedTime: "2023-12-09T19:07:55+00:00",
-    featuredImage: welcomePatelsImage,
+    publishedTime: "2024-02-24T06:23:14+05:30",
+    featuredImage: youtubevideotomp3,
     featuredImageAltText: "a-person-with-computer",
     ogImageURL: `${BASE_URL.HOME_PAGE_BASE_URL}/welcome-page.png`,
   },
-
-  // Youtube Video Convert MP3
-  // YOUTUBE_VIDEO_TO_MP3_PAGE: {
-  //   absoluteURL: blogPostURLS.YOUTUBE_VIDEO_TO_MP3_PAGE_ABSOLUTE,
-  //   relativeURL: blogPostURLS.YOUTUBE_VIDEO_TO_MP3_PAGE_RELATIVE,
-  //   title: "Youtube Videos to MP3: Convert and Download For Free",
-  //   description:
-  //     "Download YouTube videos as MP3 for free with our most powerful YouTube videos to MP3 converter. No app or software is needed.",
-  //   publishedTime: "2024-01-05T23:01:17+05:30",
-  //   lastUpdateTime: `${dynamicLastUpdatedTime()}`,
-  //   tags: [
-  //     { tag: "youtube-mp3", href: `${blogPostURLS.YOUTUBE_VIDEO_TO_MP3_PAGE_RELATIVE}` },
-  //     { tag: "video-to-mp3", href: `${blogPostURLS.YOUTUBE_VIDEO_TO_MP3_PAGE_RELATIVE}` },
-  //     { tag: "Blog", href: `${blogPostURLS.BLOG_PAGE_RELATIVE}` },
-  //     { tag: "Karunakar Patel", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
-  //   ],
-  //   featuredImage: youtubevideotomp3,
-  //   featuredImageAltText: "youtube-video-to-mp3",
-  //   ogImageURL: `${BASE_URL.HOME_PAGE_BASE_URL}/youtube-to-mp3.png`,
-  // },
 };
 
 export const blogPostsObj: blogPostsObjProps[] = [
