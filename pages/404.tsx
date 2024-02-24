@@ -17,11 +17,11 @@ const Custom404: NextPageWithLayout = () => {
   return (
     <>
       <HeaderSection
-        title="Page Not Found | BloggingLove"
-        description="This is an custom 404 page for BloggingLove Blog"
-        publishedTime="2024-01-29T17:07:31+05:30"
-        lastUpdatedTime="2024-01-29T17:07:31+05:30"
-        url="https://www.blogginglover.in/404"
+        title="Page Not Found | Youtube to MP3 Converter | CloutJamAI"
+        description="This is an custom 404 page for CloutjamAI Blog"
+        publishedTime="2024-02-24T01:26:28+05:30"
+        lastUpdatedTime="2024-02-24T01:26:28+05:30"
+        url="https://cloutjamai.com/404"
         image={NotFoundSvgImage}
       />
       <Grid container minHeight="80vh">
