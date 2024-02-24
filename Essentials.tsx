@@ -115,7 +115,7 @@ export const SEO_OBJ: SEO_OBJ_Props = {
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2024-02-24T06:23:14+05:30",
     featuredImage: youtubevideotomp3,
-    featuredImageAltText: "a-person-with-computer",
+    featuredImageAltText: "youtube-to-mp3-converter",
     ogImageURL: `${BASE_URL.HOME_PAGE_BASE_URL}/welcome-page.png`,
     tags: [
       { tag: "youtube-mp3", href: `${blogPostURLS.HOME_PAGE_RELATIVE}` },
@@ -134,7 +134,7 @@ export const SEO_OBJ: SEO_OBJ_Props = {
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2024-02-24T06:23:14+05:30",
     featuredImage: youtubevideotomp3,
-    featuredImageAltText: "a-person-with-computer",
+    featuredImageAltText: "youtube-to-mp3-converter",
     ogImageURL: `${BASE_URL.HOME_PAGE_BASE_URL}/welcome-page.png`,
   },
 
@@ -147,7 +147,7 @@ export const SEO_OBJ: SEO_OBJ_Props = {
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2024-02-24T06:23:14+05:30",
     featuredImage: youtubevideotomp3,
-    featuredImageAltText: "a-person-with-computer",
+    featuredImageAltText: "youtube-to-mp3-converter",
     ogImageURL: `${BASE_URL.HOME_PAGE_BASE_URL}/welcome-page.png`,
   },
 
@@ -160,7 +160,7 @@ export const SEO_OBJ: SEO_OBJ_Props = {
     lastUpdateTime: `${dynamicLastUpdatedTime()}`,
     publishedTime: "2024-02-24T06:23:14+05:30",
     featuredImage: youtubevideotomp3,
-    featuredImageAltText: "a-person-with-computer",
+    featuredImageAltText: "youtube-to-mp3-converter",
     ogImageURL: `${BASE_URL.HOME_PAGE_BASE_URL}/welcome-page.png`,
   },
 };
