@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://www.blogginglover.in/sitemap.xml
+Sitemap: https://cloutjamai.com/sitemap.xml 
