@@ -24,6 +24,8 @@ const Document: React.FC = () => {
           />
           {/* Google Adsense Code In Below */}
           <script async src={process.env.ADSENSE_URL} crossOrigin="anonymous"></script>
+          {/* Google Adsense Verification Code Below */}
+          <meta name="google-adsense-account" content={process.env.GOOGLE_ADSENSE_CODE}></meta>
         </Head>
         <body>
           <Main />

@@ -8,6 +8,7 @@ const nextConfig = {
     ANALYTICS_URL: process.env.ANALYTICS_URL,
     ANALYTICS_ID: process.env.ANALYTICS_ID,
     ADSENSE_URL: process.env.ADSENSE_URL,
+    GOOGLE_ADSENSE_CODE: process.env.GOOGLE_ADSENSE_CODE,
     HUGGING_FACE_TOKEN: process.env.HUGGING_FACE_TOKEN,
     STABLE_DIFFUSION_2_1_URL: process.env.STABLE_DIFFUSION_2_1_URL,
     OPEN_JOURNEY_URL: process.env.OPEN_JOURNEY_URL,
